@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    # Add additional configurations for the API service if needed
+    # ports:
+    #   - "5001:5000"
+    # volumes:
+    #   - ./api:/app/api
+    # environment:
+    #   - ENV_VARIABLE=value
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    # Add additional configurations for the client service if needed
+    # ports:
+    #   - "3001:3000"
+    # volumes:
+    #   - ./client:/app/client
+    # environment:
+    #   - ENV_VARIABLE=value
+
+# Optionally, you can define networks, volumes, etc., if needed
+

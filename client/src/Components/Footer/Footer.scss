@@ -1,0 +1,54 @@
+.footer {
+    display: flex; 
+    width: 100%;
+    padding: 10px;
+    background-color: cornflowerblue;
+    .content {
+        width: 80%;
+        margin: 0 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .madeby {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: white;
+            h1 {
+                padding: 0;
+                margin: 0;
+                color: white;
+            }
+            .links {
+                font-size: 20px;
+                color: white;
+                display: flex;
+                gap: 10px;
+                a{
+                    color: white;
+                }
+            }
+        }
+        .brands {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:573px) {
+    .footer {
+        .content {
+            flex-direction: column-reverse;
+            align-items: start;
+            gap: 20px;
+        }
+    }
+}

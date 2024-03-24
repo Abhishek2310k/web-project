@@ -1,0 +1,139 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.form_and_result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    .form {
+        position: relative;
+        .spinner {
+            position: absolute;
+            bottom: 10%;
+        }
+        h1 {
+            color: white;
+            font-size: 30px;
+        }
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background-image: url("https://imgs.search.brave.com/16xQPxiHmYPhY5pMJxTHabINc0JrmQnadcTMbQlZRoM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2E0L0lJU0NfQmFu/Z2Fsb3JlXzAxLmpw/Zw");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            input[type=file] {
+                background-color: rgba(0,0,0,0.5);
+                color: white;
+                display: flex;
+                padding: 10px;
+                border: 0.7px solid gray;
+                border-radius: 8px;
+                backdrop-filter: blur(5px);
+            }
+            input[type=file]::file-selector-button {
+                padding: 10px;
+                border-radius: 8px;
+                border: 0.7px solid gray;
+                color: cornflowerblue;
+                background: transparent;
+                margin-right: 8%;
+            }
+            input[type=file]::file-selector-button:hover {
+                background-color: cornflowerblue;
+                color: white;
+            }
+            button {
+                backdrop-filter: blur(5px);
+                padding: 10px;
+                border: 0.7px solid gray;
+                border-radius: 8px;
+                background-color: rgba(0,0,0,0.5);
+                color: cornflowerblue;
+            }
+            button:hover {
+                color: white;
+                background-color: cornflowerblue;
+            }
+        }
+    }
+    
+    .images {
+        height: 100vh;
+        display: flex;
+        flex-direction: center;
+        align-items: center;
+    }
+
+    .images {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        img {
+            height: 400px;
+            width: 300px;
+            border: 0.7px solid gray;
+        }
+        .result {
+            img {
+                height: 400px;
+                width: 300px;
+            }
+        }
+    }
+    .result_content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            list-style-type: none;
+            padding: 0;
+            li {
+                padding: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:"810px") {
+    .form_and_result {
+        .images {
+            // padding: 10px 0; 
+            flex-direction: column;
+            height: 150vh;
+            img {
+                width: 100%;
+            }
+            .orig {
+                padding: 10px;
+            }
+            .result {
+                padding: 10px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
